@@ -1,0 +1,30 @@
+/*
+Conditional Statements:-
+
+1)if else Statements:-
+
+ Syntax:-
+  if(condition){
+  }
+  else{
+  }
+*/
+
+// let us solve some of the questions:-
+//Q1-print largest of two:-
+import java.util.Scanner;
+class basic{
+  public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Enter the valus of a,b and c:");
+  int a=sc.nextInt(); //taking input value of a
+  int b=sc.nextInt(); //taking input value of b
+  
+  if(a>b){
+   System.out.println("The greater number is A:"+a);
+  }
+  else{
+  System.out.println("The greater value is B:"+b);
+  }
+  }
+}
