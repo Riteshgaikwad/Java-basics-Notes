@@ -1,0 +1,18 @@
+/*
+**Conditional statements**
+3)Switch Statements:-
+   Let us consider an example:-
+   1 for samosa 
+   2 for burger
+   3 for mango shake
+   here we will switch the int variable for specific orderssuch as given above
+   Syntax:-
+   switch(variable){
+   case 1:                                              // here we write operation which we want to perform 
+   case 2:                                              // we also use break statement to move out of the all cases when we find the required case                                        
+   case 3:
+   .....
+   default:                                              // if no statement is satisfied then default perform the given operations
+   }
+
+*/
