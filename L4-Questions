@@ -1,0 +1,67 @@
+//Q1:-Print reverse of a number:-
+//Solution:-
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:-");
+        int num=sc.nextInt();   // input from the user
+       
+        while(num>0){   // condition of num must be greater than 0
+            int rem=num%10;  //find the last digit by dividing the number by 10
+            System.out.print(rem); //print last digit as output
+            num/=10;         //update the value of num
+        }
+        System.out.println();  
+        sc.close();
+    }
+}
+
+//Q2:-Reverse a given number. num=10899
+//Solution:-
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        int num=10899;   //number which we have to reverse
+        int rev=0;       //new variable where we will store then= reverse of given number
+        while(num>0){        //condition
+            int rem=num%10;     //last digit of number
+            rev=rev*10+rem;  // adding it to rev
+            num/=10; //update value of num
+        }
+        System.out.println(rev); //give rev as an output
+        
+    }
+
+}
+
+//Q3:-Check if number is prime or not
+//Solution:-
+
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int num = sc.nextInt();
+        if (num == 2) {
+            System.out.println("Prime");
+        } else {
+            boolean isprime = true;
+            for (int i = 2; i <= Math.sqrt(num); i++) {   // we used square root to make it more optimised
+                if (num % i == 0) {
+                    isprime = false;
+                }
+            }
+            if (isprime == true) {
+                System.out.println("Prime");
+            } else {
+                System.out.println("Not Prime");
+            }
+        }
+        sc.close();
+    }
+}
