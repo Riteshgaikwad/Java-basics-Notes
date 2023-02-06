@@ -1,0 +1,115 @@
+/*
+*         -line 1
+**        -line 2
+***       -line 3
+****      -line 4
+
+1)check the lines ->line=4
+2)outer loop ->run from 1 to no. of lines thus, 1 to 4
+3)inner loop ->find the relation between line and stars ->thus, here line no. is equal to the no. of stars present in the line 
+like line 1 have 1 star line 2 have 2 star so we will start inner loop from 1 to i 
+*/
+//Solution:-
+
+public class basics {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/*
+****     -line 1
+***      -line 2
+**       -line 3
+*        -line 4
+
+
+1)check the lines ->lines=4
+2)outer loop ->run from 1 to no. of lines thus, 1 to 4
+3)inner loop ->find the relation between line and stars ->thus, here we observe that star are equal to no. of lines and then they are decreasing
+  according to the condition we get the logic that (n-line+1) where, n is number of line=4, line is the value of i which is from 1 to 4 
+  and adding 1 because the loop will give ans as 4-1+1=4 similarly for next loop 4-3+1=3.... so on..
+  
+*/
+//Solution:-
+
+public class basics {
+    public static void main(String args[]) {
+        int n=4;
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= (n-i+1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+// alternate method:-
+/*
+1)check the lines ->lines=4
+2)outer loop ->run reverse from 4 to 1 and decrease the value of i thus,i--
+3)inner loop ->find the relation between line and stars ->thus, we will run loop from 1 to the value of i thus,1 to i for every loop 
+*/
+public class basics {
+    public static void main(String args[]) {
+        for (int i = 4; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+/*
+1
+12
+123
+1234
+
+the logic is similar to the first pattern 
+*/
+//Solution:-
+
+
+public class basics {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+/*
+A
+BC
+DEF
+GHIJ
+
+Same logic but just add char ch and declare as 'A' and increment it with 1 
+*/
+//Solution:-
+
+public class basics {
+    public static void main(String args[]) {
+        char ch='A';
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+}
