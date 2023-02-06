@@ -65,3 +65,89 @@ public class basics {
         sc.close();
     }
 }
+
+
+//Q4. Question 2 : Write a program that reads a set of integers, and then prints the sum of the even and odd integers
+//Solution:-
+
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        int EvenSum=0;
+        int OddSum=0;
+        do {
+            System.out.println("Enter the number:");
+            int num=sc.nextInt();
+            if(num%2==0){           // check number is even or not if yes then add it to the even sum
+                EvenSum+=num;
+            }
+            else{
+                OddSum+=num;       // if its not an even number then add to the odd sum
+            }
+            System.out.println("Enter yoiur choice: press 1 to continue and press 0 to exit!!");
+            choice=sc.nextInt();      //taking choice from the user
+        } while (choice==1);    // if the choice is 1 then continue the loop else exit the loop 
+
+        System.out.println("Even sum is:"+EvenSum);
+        System.out.println("Odd Sum is:"+OddSum);
+        sc.close();
+
+    }
+
+}
+
+//Q5.Question 3 : Write a program to find the factorial of any number entered by the user
+//Solution:-
+
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number:");
+       int num=sc.nextInt();
+       int factorial=1;
+       while(num>0){
+        factorial=factorial*num;
+        num--;
+       }
+       System.out.println(factorial);
+        sc.close();
+    }
+}
+/*
+We can soive this with the help of for loop as well 
+public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number:");
+       int num=sc.nextInt();
+       int factorial=1;
+       for(int i=1;i<=num;i++){
+        factorial=factorial*i;
+       }
+       System.out.println(factorial);
+        sc.close();
+    }
+
+*/
+
+//Q6. Question 4 : Write a program to print the multiplication table of a number N, entered by the user.
+//Solution:-
+
+import java.util.Scanner; //its an header file for taking an input from the user
+
+public class basics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number:");
+       int num=sc.nextInt();
+       for(int i=1;i<=10;i++){
+        System.out.println(num+" * "+i+" = "+num*i);
+       }
+        sc.close();
+    }
+}
+
