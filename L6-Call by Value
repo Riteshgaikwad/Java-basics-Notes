@@ -1,0 +1,109 @@
+/*
+Java always calls by value
+
+example:- 
+        int a=5;
+        int b=10;
+        int temp=a;
+        a=b;
+        b=temp;  
+        System.out.println("a:"+a);   //Here a becomes 10 
+        System.out.println("b:"+b);    // here b becomes 5
+        
+      
+*/
+
+//let us create a swaping function 
+import java.util.Scanner;
+
+public class basics {
+    public static void swap(int a ,int b){     // created swaping function which have two parameters a and b
+        int temp=a;
+        a=b;
+        b=temp;
+        System.out.println("a:"+a);
+        System.out.println("b:"+b);
+    }
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int a=5;
+        int b=10;
+        swap(a, b);      //function call
+        sc.close();
+    }
+}
+
+
+//Let us understand the concept properly by execution the above code
+changeA(int a){
+  a=10;
+}
+public static void main(String args[]){
+int a=5;
+changeA(a);
+System.out.println(a);     // the output will be 5
+}
+
+/*
+The reason of getting the output as 5 is:-
+1) it passes the copy of original a
+2)The change take palece only in the particular function
+3)do not pass original value
+*/
+
+//Q1:-Find product of a and b:a=3,b=5
+
+public class basics {
+    public static int product(int a ,int b){
+        int product=a*b;
+        return product;
+    }
+    public static void main(String args[]) {
+        int a=3;
+        int b=5;
+        product(a, b);
+        int result=product(a, b);
+        System.out.println("The product is:"+result);
+        result=product(8,5);
+        System.out.println("the product is:"+result);
+    }
+}
+//Q2:-Factorial of a number
+
+public class basics {
+    public static int factorial(int n){
+        int factorial=1;
+        for(int i=1;i<=n;i++){
+            factorial=factorial*i;
+        }
+        return factorial;
+    }
+    public static void main(String args[]) {
+        int n=4;
+        int result=factorial(n);
+        System.out.println(result);
+    } 
+}
+
+//Binomial coefficient nCr:-
+
+public class basics {
+    public static int factorial(int n){
+        int factorial=1;
+        for(int i=1;i<=n;i++){
+            factorial=factorial*i;
+        }
+        return factorial;
+    }
+    public static int bino_coeff(int n,int r){
+        int fac_n=factorial(n);
+        int fac_r=factorial(r);
+        int fac_nr=factorial(n-r);
+        int bi_coefficient=fac_n/(fac_r*fac_nr);
+        return bi_coefficient;
+    }
+    public static void main(String args[]) {
+     int result=bino_coeff(5, 2);
+        System.out.println(result);
+    }
+}
