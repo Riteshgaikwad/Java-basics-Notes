@@ -1,0 +1,155 @@
+/*
+Inbuilt vs user defined method:-
+
+                            method
+                              |
+     ---------------------------------------------------- 
+     |                                                   |
+   user defined                                       inbuilt method
+     |                                                    |      
+   factorial,sum,product                               Math-> pow,sqrt,max.min
+   
+
+*/
+//Function overloading:-
+/*
+Multiplying(int a,int b)                  Multiplying(int a,int b,int c)
+Multiplying(float a,float b)              Multiplying(float a,float b,float c)
+Multiplying(double a,double b)            Multiplying(double a,double b double c)
+*/
+
+//Using parameters
+/*
+f1:- int sum(int a,int b){
+        return a+b;
+        }
+f2: int sum(int a,int b,int c){
+          return a+b+c;
+          }
+*/
+public class basics {
+   public static int sum(int a,int b){
+    return a+b;
+   }
+   public static int sum(int a,int b,int c){
+    return a+b+c;
+   }
+   public static void main(String args[]){
+        System.out.println(sum(3,5));
+        System.out.println(sum(5,2,1));
+   }
+}
+
+//Using data type:-
+/*
+f1:-add 2 integer  
+    int sum(int a,int b){
+      return a+b;
+      }
+f2:-add 2 float value
+      float sum(float a,float b){
+      return a+b;
+      }
+*/
+public class basics {
+   public static int sum(int a,int b){
+    return a+b;
+   }
+   public static float sum(float a,float b){
+    return a+b;
+   }
+   public static void main(String args[]){
+        System.out.println(sum(3,5));
+        System.out.println(sum(5,2));
+   }
+}
+
+//Q1:check if number is prime or not
+public class basics {
+   public static boolean isPrime(int num){
+    if(num==2){
+        return true;
+    }
+    for(int i=2;i<=Math.sqrt(num);i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+   }
+   public static void main(String args[]){
+       System.out.println(isPrime(5));
+   }
+}
+
+//Q2:Print all Prime in Range
+
+import java.util.PrimitiveIterator;
+
+public class basics {
+   public static boolean isPrime(int num){
+    if(num==2){
+        return true;
+    }
+    for(int i=2;i<=Math.sqrt(num);i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+   }
+
+   public static void PrimesinRange(int n){
+        for(int i=2;i<=n;i++){
+            if(isPrime(i)){
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println();
+   }
+   public static void main(String args[]){
+     
+       PrimesinRange(20);
+   }
+}
+
+//Q3:-converting from binary to decimal
+
+public class basics {
+ public static void bin_to_decimal(int bin_num){
+    int my_num=bin_num;
+    int pow=0;
+    int dec_num=0;
+    while(bin_num>0){
+        int last_digit=bin_num%10;
+        dec_num=dec_num+(last_digit*(int)Math.pow(2,pow));
+        pow++;
+        bin_num/=10;
+    }
+    System.out.println("The decimal of "+my_num+" = "+dec_num);
+ }
+   public static void main(String args[]){
+    bin_to_decimal(101);
+   }
+}
+
+//Q4:-converting from decimal to binary
+
+
+public class basics {
+ public static void bin_to_decimal(int n){
+    int my_num=n;
+    int pow=0;
+    int dec_num=0;
+    while(n>0){
+        int last_digit=n%2;
+        dec_num=dec_num+(last_digit*(int)Math.pow(10,pow));
+        pow++;
+        n/=2;
+    }
+    System.out.println("The decimal of "+my_num+" = "+dec_num);
+ }
+   public static void main(String args[]){
+    bin_to_decimal(4);
+   }
+}
