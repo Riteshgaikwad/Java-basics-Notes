@@ -1,0 +1,47 @@
+/*
+*Syntax:-
+
+return type name(){
+//body
+return statenemt
+}
+
+*example:-
+public class fine_name{
+  public static void printHelloWorld(){         //declare the function
+  System.out.println("Hello World");
+  return;
+  }
+  public static void main(String args[]){
+  printHelloWorld();     //here we called the function
+  }
+}
+
+*Syntax with parameters:-
+
+return type name (type parameter1,type parameter2)
+{
+//body
+return statement;
+}
+*/
+
+//Let us writa a code for sum of three numbers:-
+
+import java.util.Scanner;
+public class basics {
+    public static int CalculateSum(int a,int b,int c){   // parameter or formal parameter ->function definition
+        int sum=a+b+c;
+        return sum;
+    }
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the value of a,b and c:");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int sum=CalculateSum(a, b, c);  //argument or actual parameter->function call
+        System.out.println("The sum is:"+sum);
+        sc.close();
+    }
+}
