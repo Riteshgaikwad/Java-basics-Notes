@@ -1,0 +1,49 @@
+/*
+There are mainly Three types of scope:-
+1)method scope:-
+
+function to variable
+-> can use variable in function
+-> variable declared in function cannot be used in main
+
+example:-
+
+  public static void hello{
+  int s=10;
+  System.out.println("Hello");
+  System.out.println(s);    // s is declared first
+  }
+  public static void main(String args[]{
+  System.out.println(s);             // this will give an error because we cannot use variable in main function which is used in the function 
+  }
+  
+  
+2)Block scope:-
+
+    {
+        |
+    Block od code
+        |
+    
+    }
+    
+    example:-
+    public static void main(String args[]){
+    int p=10;               //p block starts
+    {
+      {                     // s block start
+      int s=45;
+      System.out.println(p);    // no error inside the block
+      }                     //s block end  
+     System.out.println(s);   // show error outside the block
+     System.out.println(p);    // no error inside the block
+    }
+*/
+
+/*
+3) class scope:-
+   these are those scope we use comminly in Java coding 
+    ->public
+    ->protected
+    ->private
+*/
