@@ -1,0 +1,117 @@
+//Question 1 : Write a Java method to compute the average of three numbers.
+
+import java.util.Scanner;
+public class basics {
+public static double average(double x,double y,double z){
+    return (x+y+z)/3;
+}   
+public static void main(String args[]){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter the first number:");
+   double x=sc.nextDouble();
+   System.out.println("Enetr the second number:");
+   double y=sc.nextDouble();
+   System.out.println("Enter the third number:");
+   double z=sc.nextDouble();
+   System.out.println("The average of three number is:"+average(x, y, z));
+   }
+}
+
+//Q2:-Question 2 : Write a method named isEven that accepts an int argument. The method should return true if the argument is even, 
+//                 or false otherwise. Also write a program to test your method.
+
+import java.util.Scanner;
+public class basics {
+    public static boolean isPrime(int n){
+        if(n%2==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:-");
+        int n=sc.nextInt();
+
+        if(isPrime(n)){
+            System.out.println("It is Even");
+        }
+        else{
+            System.out.println("It is Odd");
+        }
+   }
+}
+
+/*
+Q3:-Question 3 : Write a Java program to check if a number is a palindrome in Java? ( 121 is a palindrome, 321 is not)
+A number is called a palindrome if the number is equal to the reverse of a number e.g., 121 is a
+palindrome because the reverse of 121 is 121 itself. On the other hand, 321 is not a
+palindrome because the reverse of 321 is 123, which is not equal to 321.
+*/
+
+import java.util.Scanner;
+public class basics {
+  public static boolean palindrome(int num){
+    int n=num;
+    int reverse=0;
+    while(num>0){
+        int last_digit=num%10;
+        reverse=reverse*10+last_digit;
+        num/=10;
+    }
+    if(n==reverse){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+  }
+public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:-");
+        int n=sc.nextInt();
+        if(palindrome(n)){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("not palindrome");
+        }
+        sc.close();
+   }
+}
+
+/*
+Q4:-
+a. Math.min( ):-It is used to return the Smallest of two values.
+b. Math.max( ):-It returns the Largest of two values.
+c. Math.sqrt( ):-It is used to return the square root of a number.
+d. Math.pow( ):-It returns the value of first argument raised to the power to second argument.
+e. Math.avg( ):-It returns the average value
+f. Math.abs( ):-It will return the Absolute value of the given value.
+
+*/
+
+//Question 5 : Write a Java method to compute the sum of the digits in an integer
+
+import java.util.Scanner;
+public class basics {
+ public static int sum(int num){
+    int sum=0;
+    while(num>0){
+        int last_digit=num%10;
+        sum=sum+last_digit;
+        num/=10;
+    }
+    return sum;
+ }
+public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:-");
+        int n=sc.nextInt();
+        System.out.println(sum(n));
+        sc.close();
+   }
+}
