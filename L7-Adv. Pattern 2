@@ -1,0 +1,239 @@
+/*
+1)Butterfly pattern:-
+*      *
+**    **
+***  ***
+********
+********
+***  ***
+**    **
+*      *
+
+->outer loop from 1 to 4 (i)
+->inner loop from 1 to i (to print star)
+->again inner loop from 1 to 2*(n-i) (print spaces)
+->again inner loop from 1 to i (to print star)
+
+then copy the above code and paste down by running it reverse 
+->outer loop from 4 to 1 (i)  
+->inner loop from 1 to i (to print star)
+->again inner loop from 1 to 2*(n-i) (print spaces)
+->again inner loop from 1 to i (to print star)
+*/
+
+
+public class basics {
+public static void butterfly_pattern(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=i;j++){
+         System.out.print("*");
+      }
+      for(int k=1;k<=2*(n-i);k++){
+         System.out.print(" ");
+      }
+      for(int j=1;j<=i;j++){
+         System.out.print("*");
+      }
+     System.out.println();
+   }
+   for(int i=n;i>=1;i--){
+      for(int j=1;j<=i;j++){
+         System.out.print("*");
+      }
+      for(int k=1;k<=2*(n-i);k++){
+         System.out.print(" ");
+      }
+      for(int j=1;j<=i;j++){
+         System.out.print("*");
+      }
+     System.out.println();
+   }
+}
+public static void main(String args[]){
+   butterfly_pattern(4);
+   }
+}
+
+/*
+2)Solid Rhombus:-
+    *****
+   *****
+  *****
+ *****
+*****
+
+->outer loop from 1 to n
+->inner loop from 1 to (n-i) print space
+->inner loop fror 1 to n print star
+*/
+
+
+public class basics {
+public static void solid_rhombus(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int k=1;k<=n;k++){
+         System.out.print("*");
+      }
+      System.out.println();
+   }
+}
+public static void main(String args[]){
+      solid_rhombus(5);
+   }
+}
+
+/*
+3)Hollow rhombus
+     *****
+   *     *
+  *    *
+ *    *
+*****   
+
+->outer loop from 1 to n
+->inner loop from 1 to (n-i) print space
+->inner loop fror 1 to 
+    if(i==1 || k==1 || i==n || k==n){print("*")}
+    else{print(" ")}
+
+*/
+
+
+public class basics {
+public static void solid_rhombus(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int k=1;k<=n;k++){
+         if(i==1 || k==1 || i== n || k== n){
+         System.out.print("*");
+         }
+         else{
+            System.out.print(" ");
+         }
+      }
+      System.out.println();
+   }
+}
+public static void main(String args[]){
+      solid_rhombus(5);
+   }
+}
+
+/*
+4)Diamond pattern
+   *
+  ***
+ *****
+*******
+*******
+ *****
+  ***
+   *
+
+->outer loop from 1 to n (i)
+->inner loop from 1 to (n-i) print space
+->inner loop from 1 to (2*i)-1 print star 
+
+then copy the above code and paste down by running it reverse 
+->outer loop from n to 1 (i)
+->inner loop from 1 to (n-i) print space
+->inner loop from 1 to (2*i)-1 print star 
+
+*/
+
+public class basics {
+public static void diamond(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int j=1;j<=(2*i)-1;j++){
+         System.out.print("*");
+      }
+      System.out.println();
+   }
+   for(int i=n;i>=1;i--){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int j=1;j<=(2*i)-1;j++){
+         System.out.print("*");
+      }
+      System.out.println();
+   }
+}
+public static void main(String args[]){
+      diamond(4);
+   }
+}
+
+/*
+5)Number Pyramid
+    1
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+
+->outer loop from 1 to n (i)
+->inner loop from 1 to (n-i) print space
+->inner loop from 1 to i print i
+*/
+
+public class basics {
+public static void number_pyramid(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int j=1;j<=i;j++){
+         System.out.print(i+" ");
+      }
+      System.out.println();
+   }
+}
+public static void main(String args[]){
+      number_pyramid(5);
+   }
+}
+
+/*
+6)Palindromic pattern
+    1
+   212
+  32123
+ 4321234
+543212345
+
+->outer loop from 1 to n (i)
+->inner loop from 1 to (n-i) print space 
+->inner loop from i to 1 print j 
+-> for assending order inner loop from 2 to i print j
+*/
+
+import java.util.Scanner;
+public class basics {
+public static void number_pyramid(int n){
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=(n-i);j++){
+         System.out.print(" ");
+      }
+      for(int j=i;j>=1;j--){
+         System.out.print(j);
+      }
+      //assending
+      for(int j=2;j<=i;j++){
+         System.out.print(j);
+      }
+      System.out.println();
+   }
+}
+public static void main(String args[]){
+      number_pyramid(5);
+   }
+}
